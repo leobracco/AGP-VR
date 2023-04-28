@@ -13,7 +13,7 @@ function create_UUID() {
 
 
 var localDB = new PouchDB('cemento')
-var remoteDB = new PouchDB('https://admin:b83md17z@couchdb.tools.quodii.com/cemento');
+var remoteDB = new PouchDB('https://admin:password@ip/cemento');
 localDB.sync(remoteDB, {
     live: true,
     retry: true
