@@ -16,7 +16,7 @@ client.subscribe('#')
 
 client.on('message', function (topic, message) {
   
-  var datosMQTT = JSON.parse(message);
+ // var datosMQTT = JSON.parse(message);
   console.log('Received Message:= ' + message  + '\nOn topic:= ' + topic)
-  console.log('Toma:= ' + datosMQTT.nserie + '\nOn topic:= ' + topic)
+  //console.log('Toma:= ' + datosMQTT.nserie + '\nOn topic:= ' + topic)
 })
