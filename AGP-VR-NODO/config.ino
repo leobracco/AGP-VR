@@ -34,7 +34,9 @@ bool saveConfig(DynamicJsonDocument& json,const char* FileName) {
     Serial.println("No se puede abrir el archivo para grabar");
     return false;
   }
-
+  else
+    Serial.println("Se grabo correctamente");
+  serializeJson(json, Serial);
   serializeJson(json, configFile);
   configFile.close();
   return true;

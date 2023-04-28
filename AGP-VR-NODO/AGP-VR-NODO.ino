@@ -10,7 +10,7 @@
 
 #define DEBUG true
 // Configuración de MQTT
-const char * mqtt_server = "192.168.1.17";
+const char * mqtt_server = "192.168.0.10";
 const int mqtt_port = 1883;
 const char * mqtt_topic = "#";
 WiFiClient espClient;
@@ -25,7 +25,7 @@ struct ParametrosMotorConfig {
   int MODO = 1; // 
   float VELOCIDAD = 0; // 
   double PWM_MANUAL = 0; // 
-  int IDMOTOR = 1;
+  int IDMOTOR = 2;
   int AUTOCAL = 0;
 };
 // Definir los parámetros del PID
@@ -75,7 +75,7 @@ PID PID_Motor( & PidConfig.PULSOS, & PidConfig.PWM_OUT, & PidConfig.SETPOINT, Pi
 
 PID_ATune aTune( & PidConfig.PULSOS, & PidConfig.PWM_OUT);
 // Definir los parámetros del encoder
-const byte ENCODER_PIN = D6;
+const byte ENCODER_PIN = D7;
 volatile unsigned long encoderCount = 0;
 volatile unsigned long lastInterruptTime = 0;
 // Definir las constantes de conversión
@@ -261,7 +261,7 @@ void loop() {
   char jsonBuffer[512];
   if (millis() - lastMillisSend >= 1000) {
     serializeJson(jsonDoc, jsonBuffer);
-    client.publish("/master/estado/motor/1", jsonBuffer);
+    client.publish("/master/estado/motor/2", jsonBuffer);
     lastMillisSend = millis();
   }
 }

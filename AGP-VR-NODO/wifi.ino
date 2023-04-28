@@ -1,6 +1,6 @@
 
 // Configuración de red
-const char* ssid = "LB";
+const char* ssid = "AgroParallel2.4";
 const char* password = "1564santiago";
 void setup_wifi() {
   Serial.println();

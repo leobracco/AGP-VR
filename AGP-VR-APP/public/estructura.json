@@ -1,0 +1,27 @@
+{
+    "Menu": {
+        "0": {
+            "idseccion": "1",
+            "name": "Extraccion",
+            "name_short": "EXTRACCION",
+            "equipos": {
+                "0": {
+                    "idequipo": "1",
+                    "name": "Rodillos",
+                    "name_short": "RODILLOS",
+                    "variables": {
+                        "0": { "idestructura": "1", "idseccion": "1", "idequipo": "1", "seccion_nombre": "Extraccion", "seccion_short": "EXTRACCION", "equipo_nombre": "Rodillos", "equipo_short": "RODILLOS", "tipodedato": "number", "equipo": "Rodillos", "minimo": "7", "maximo": "9", "name": "Desgaste Placas Mesa 1211", "short": "M11", "tag": "MA_M11_DES_PLM", "tag_user": "DES_PLM", "unit": "grs\/tn" },
+                        "1": { "idestructura": "3", "idseccion": "1", "idequipo": "1", "seccion_nombre": "Extraccion", "seccion_short": "EXTRACCION", "equipo_nombre": "Rodillos", "equipo_short": "RODILLOS", "tipodedato": "number", "equipo": "Rodillos", "minimo": "0", "maximo": "2", "name": "Desgaste Placas Mesa 2", "short": "RODILLOS", "tag": "MA_M11_DES_PLM", "tag_user": "DES_PLM", "unit": "mm" },
+                        "2": { "idestructura": "3", "idseccion": "1", "idequipo": "1", "seccion_nombre": "Extraccion", "seccion_short": "EXTRACCION", "equipo_nombre": "Rodillos", "equipo_short": "RODILLOS", "tipodedato": "number", "equipo": "Rodillos", "minimo": "0", "maximo": "2", "name": "Desgaste Placas Mesa 3", "short": "RODILLOS", "tag": "MA_M11_DES_PLM", "tag_user": "DES_PLM", "unit": "mm" },
+                        "3": { "idestructura": "3", "idseccion": "1", "idequipo": "1", "seccion_nombre": "Extraccion", "seccion_short": "EXTRACCION", "equipo_nombre": "Rodillos", "equipo_short": "RODILLOS", "tipodedato": "number", "equipo": "Rodillos", "minimo": "0", "maximo": "2", "name": "Desgaste Placas Mesa 4", "short": "RODILLOS", "tag": "MA_M11_DES_PLM", "tag_user": "DES_PLM", "unit": "mm" }
+
+                    }
+                }
+            }
+        },
+        "1": { "idseccion": "2", "name": "Trituracion", "name_short": "TRITURACION", "equipos": {} },
+        "2": { "idseccion": "3", "name": "Prehomogeneizacion", "name_short": "PREHOMOGENEIZACION", "equipos": {} },
+        "3": { "idseccion": "4", "name": "Molienda Crudo", "name_short": "MOLIENDACRUDO", "equipos": {} },
+        "4": { "idseccion": "5", "name": "Precalentador Ciclones", "name_short": "PRECALENTADORCICLONES", "equipos": {} }
+    }
+}

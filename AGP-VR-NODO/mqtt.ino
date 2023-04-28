@@ -33,7 +33,7 @@ void callback(char * topic, byte * payload, unsigned int length)
         
         speedKmH = doc["velocidad"]; // 10.5
     }
-     if (strcmp(topic, "/nodo/motor/1/dosis") == 0)
+     if (strcmp(topic, "/nodo/motor/2/dosis") == 0)
     {
 
           if (saveConfig(doc, "/MotorConfig.json"))
@@ -47,7 +47,7 @@ void callback(char * topic, byte * payload, unsigned int length)
         
         
     }
-    if (strcmp(topic, "/nodo/motor/1/calibracion") == 0)
+    if (strcmp(topic, "/nodo/motor/2/calibracion") == 0)
     {
        
           if (saveConfig(doc, "/CalConfig.json"))
@@ -65,12 +65,12 @@ void callback(char * topic, byte * payload, unsigned int length)
         
         
     }
-    if (strcmp(topic, "/nodo/motor/1/calibracion/stop") == 0)
+    if (strcmp(topic, "/nodo/motor/2/calibracion/stop") == 0)
     {
         Cytron_Motor.setSpeed(0);
         ESTADO = 0;
     }
-    if (strcmp(topic, "/nodo/motor/1/pwm_minimo") == 0)
+    if (strcmp(topic, "/nodo/motor/2/pwm_minimo") == 0)
     {
         pulseCountRev = 0;
         pulseCountCal = 0;
@@ -79,14 +79,14 @@ void callback(char * topic, byte * payload, unsigned int length)
         ESTADO = 2;
     }
     
-     if (strcmp(topic, "/nodo/motor/1/parametros/autocal") == 0)
+     if (strcmp(topic, "/nodo/motor/2/parametros/autocal") == 0)
     {
                   
             MotorConfig.AUTOCAL =  doc["auto"].as<int>();
          
             
      }
-    if (strcmp(topic, "/nodo/motor/1/parametros") == 0)
+    if (strcmp(topic, "/nodo/motor/2/parametros") == 0)
     {
         if (saveConfig(doc, "/PidConfig.json"))
         {
@@ -115,7 +115,7 @@ void reconnect()
         if (client.connect(String(ESP.getChipId()).c_str()))
         {
             client.subscribe("/tractor/velocidad");
-            client.subscribe("/motor/1/parametros");
+            client.subscribe("/motor/2/parametros");
             client.subscribe("/nodo/#");
             client.subscribe("/secciones");
             

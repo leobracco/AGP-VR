@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Colector de datos movil" />
+    <meta name="author" content="" />
+
+    <title>AGP-VR - Agro Parallel</title>
+
+    <meta name="application-name" content="AGP-VR" />
+    <meta name="apple-mobile-web-app-title" content="AGP-VR APP" />
+    <meta name="msapplication-starturl" content="/index.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link href="vendor/fontawesome-free/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" rel="preload" />
+
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="/img/qii.jpeg" />
+
+    <meta name="theme-color" content="#764ABC" />
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css" defer />
+
+    <link href="css/bstreeview.css" rel="stylesheet" />
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet" defer />
+    <link href="css/mmenu.css" rel="stylesheet" />
+  </head>
+
+  <body id="page-top">
+    <input id="file" type="hidden" value="dosis" >
+    <div id="wrapper">
+   
+      <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+   
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+       
+          <div class="sidebar-brand-text mx-3">Agro <sup>Parallel</sup></div>
+        </a>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider my-0" />
+
+        <!-- Nav Item - Dashboard -->
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Dosificacion</span>
+          </a>
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider" />
+
+        <!-- Heading -->
+        <div class="sidebar-heading">
+          Configuraciones
+        </div>
+        <div id="menu">
+          <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseID_SECCION" aria-expanded="true" aria-controls="collapseID_SECCION">
+              <i class="fas fa-fw fa-wrench"></i>
+              <span>Motores</span>
+            </a>
+            <div id="collapseID_SECCION" class="collapse" aria-labelledby="headingID_SECCION" data-parent="#accordionSidebar">
+              <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Ajuestes</h6>
+                <a class="collapse-item" href="calibracion.html">Calibracion</a>
+                <a class="collapse-item" href="parametros.html">Parametros</a>
+              </div>
+            </div>
+          </li>
+        </div>
+      </ul>
+      <!-- End of Sidebar -->
+
+      <!-- Content Wrapper -->
+      <div id="content-wrapper" class="d-flex flex-column">
+        <!-- Main Content -->
+        <div id="content">
+          <!-- Topbar -->
+          <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+            <!-- Sidebar Toggle (Topbar) -->
+            <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+              <i class="fa fa-bars"></i>
+            </button>
+
+            <!-- Topbar Search -->
+
+            <!-- Topbar Navbar -->
+            <ul class="navbar-nav ml-auto">
+              <div class="topbar-divider d-none d-sm-block"></div>
+            </ul>
+          </nav>
+          <!-- End of Topbar -->
+
+          <!-- Begin Page Content -->
+          <div class="container-fluid">
+            <!-- Content Row -->
+            <div class="row">
+              <div class="col-lg-10">
+                <div id="contenido"></div>
+
+                <!--Inicio del formulario-->
+                <div id="formulario">
+                  <!--Inicio Equipos-->
+                  <div class="equipos">
+                    <h1 class="h3 mb-2 text-gray-800">Dosis</h1>
+                    <!--Inicio Variables-->
+                    <div class="variables">
+                      <div class="card mb-4 py-3 border-left-primary">
+                        <div class="card-body">
+                          <div class="strong mb-1"><b>Motor </b>1</div>
+                          <div id="motor1"></div>
+                          <input id="dosis_ha_1">
+                          <button id="Dosis_Motor_1" class="btn btn-primary btn-round">Kg/Ha</button>
+                          <div class="strong mb-1"><b>Manual </b>
+                            <select class="selectpicker" id="manual_1">
+                              <option value="">-----</option>
+                              <option value="0">Manual</option>
+                              <option value="1">Automatico</option>
+                            </select>
+                          </div>
+                          <div class="strong mb-1"><b>Velocidad Motor </b></div>
+                          <input id="pwm_m1_value" type="number">
+                          
+                        </div>
+                      </div>
+                      <div class="card mb-4 py-3 border-left-primary">
+                        <div class="card-body">
+                          <div class="strong mb-1"><b>Motor </b>2</div>
+                          <div id="motor2"></div>
+                          <input id="dosis_ha_2">
+                          <button id="Dosis_Motor_2" class="btn btn-primary btn-round">Kg/Ha</button>
+                          <div class="strong mb-1"><b>Manual </b>
+                            <select class="selectpicker" id="manual_2">
+                              <option value="">-----</option>
+                              <option value="0">Manual</option>
+                              <option value="1">Automatico</option>
+                            </select>
+                          </div>
+                          <div class="strong mb-1"><b>Velocidad Motor </b></div>
+                          <input id="pwm_m2_value" type="number">
+                          
+                          
+                        </div>
+                      </div>
+                     
+                    </div>
+                    <!--Fin Variables-->
+                  </div>
+                  <!--Fin Equipos-->
+                </div>
+                <!--Fin del formulario-->
+              </div>
+            </div>
+
+            <!-- Content Row -->
+          </div>
+          <!-- /.container-fluid -->
+        </div>
+        <!-- End of Main Content -->
+
+        <!-- Footer -->
+        <footer class="sticky-footer bg-white">
+          <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+              <span>
+                Agro Parallel -
+                <script>
+                  document.write(new Date().getFullYear());
+                </script>
+              </span>
+            </div>
+          </div>
+        </footer>
+        <!-- End of Footer -->
+      </div>
+      <!-- End of Content Wrapper -->
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fas fa-angle-up"></i>
+    </a>
+
+   
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="./vendor/jquery/jquery.min.js"></script>
+    <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Include jQuery and the jQuery.mmenu .js files -->
+
+    <!-- Core plugin JavaScript-->
+    <script src="./vendor/jquery-easing/jquery.easing.min.js" async="async"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="./js/sb-admin-2.min.js"></script>
+    <script src="./js/mqtt.min.js"></script>
+    <script src="./js/mqtt-index.js"></script>
+        <script src="./js/render.js"></script>
+    
+  </body>
+</html>

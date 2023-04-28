@@ -1,0 +1,16 @@
+{
+    "name": "Quodii SAS - Cemento Avellaneda",
+    "short_name": "Qii - CA",
+    "description": "Colector de datos off-line con sincronismo automatico",
+    "icons": [{
+        "src": "../img/qii.jpeg",
+        "sizes": "512x512",
+        "type": "image/jpeg"
+    }],
+    "start_url": "./index.html",
+    "scope": "./",
+    "display": "fullscreen",
+    "theme_color": "#764ABC",
+    "background_color": "#764ABC",
+    "orientation": "any"
+}
